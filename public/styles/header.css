@@ -1,0 +1,27 @@
+header {
+height: 400px;
+width: 100%;
+background-color: #e39700;
+background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+display: flex;
+flex-direction: column;
+position: relative;
+
+}
+
+.profile-pic-div {
+  justify-content: center;
+  display: flex;
+}
+.name-bellow-img {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.h2-bellow-img-bold {
+  font-weight: 600;
+  color: rgb(226, 188, 188);
+}
+
