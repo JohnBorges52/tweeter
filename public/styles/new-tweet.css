@@ -1,0 +1,51 @@
+.new-tweet {
+  width: 100%;
+}
+
+.div-form{
+  background-color: rgb(219, 209, 200);
+
+  justify-content:space-between;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  width: 90%;
+  margin: 0 auto;
+
+}
+.form-label{
+  color:#545149; 
+  font-weight: 600;
+
+}
+
+textarea {
+  width: 100%;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #545149;
+  height: 40px;
+
+}
+.button-and-counter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px ;
+}
+.submit-tweet-btn {
+  background-color: #4056A1;
+  color: white;
+  font-family: 'Bungee', cursive;
+  border: 1px solid #4056A1;
+
+}
+.number-counter{
+  color:#545149; 
+  font-family: 'Bungee', cursive;
+}
