@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -18,20 +20,76 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .container {
+.container {
   width: 90%;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
 }
 
+/* ARTICLE ADJUSTMENTS*/
 
+.tweets-article {
+  width: 90%;
+  background-color: #f4f1ec;
+  border: 2px solid black;
+  margin: 2em auto 0 auto;
+  /* CHANGE THE MARGIN BOTTON BEFORE SUBMITING*/
+}
+.icon-name-hashtag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 13px 3vw 0;
+  align-items: center;
+}
 
+.icon-name {
+  width: 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.person-hashtag {
+  color: rgb(62, 62, 173, 0.4);
+}
+.div-past-tweet-message {
+  width: 97%;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+  padding: 15px;
+  padding-bottom: 25px;
+}
+.div-bellow-tweet-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px auto;
+  align-items: center;
+  font-size: 0.6em;
+}
+.div-bellow-tweet-message span {
+  font-weight: 600;
+}
+.icon-link-hover {
+  color: #4056a1;
+}
+
+/*HOVER PARTS OF THE ARTICLE*/
+
+.icon-link-hover:hover {
+  color: rgb(187, 141, 43);
+}
+.tweets-article:hover {
+  box-shadow: 5px 5px rgba(64, 86, 161, 0.5);
+}

@@ -5,11 +5,17 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -19,12 +25,23 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/c85488f061.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://kit.fontawesome.com/c85488f061.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
@@ -32,44 +49,45 @@
     <nav>
       <span class="nav-span-logo">tweeter</span>
       <div class="nav-div-right-text">
-        <div class="nav-text"><span class = "nav-text-bold"> Write </span> a new tweet</div>
-           <div class="icon-container"><i class="fa-solid fa-angles-down"></i></div>
+        <div class="nav-text">
+          <span class="nav-text-bold"> Write </span> a new tweet
+        </div>
+        <div class="icon-container">
+          <i class="fa-solid fa-angles-down"></i>
+        </div>
       </div>
     </nav>
 
-    
     <header>
       <div class="profile-pic-div">
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png" />
       </div>
-      <br>
+      <br />
       <div class="name-bellow-img">
-          <h2> <span class = "h2-bellow-img-bold"> John </span> Borges </h2>
+        <h2><span class="h2-bellow-img-bold"> John </span> Borges</h2>
       </div>
     </header>
 
-    
-
-
     <!-- Page-specific (main) content here -->
-    <main class="container">
-
+    <main class="container" id="tweets-container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <div  class="div-form">
-        <form method="post" action="/tweets">
-          <label class="form-label" for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          
-          <div class="button-and-counter">
-            <button class="submit-tweet-btn" type="submit">Tweet</button>
-            <output class="number-counter" name="counter" for="tweet-text">140</output>
-          </div>
-        
-        </form>
-      </div>
-      </section>
+        <div class="div-form">
+          <form method="post" action="/tweets">
+            <label class="form-label" for="tweet-text"
+              >What are you humming about?</label
+            >
+            <textarea name="text" id="tweet-text"></textarea>
 
+            <div class="button-and-counter">
+              <button class="submit-tweet-btn" type="submit" id="add-more-posts">Tweet</button>
+              <output class="number-counter" name="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </div>
+      </section>
 
 
     </main>

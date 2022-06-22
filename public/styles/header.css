@@ -6,7 +6,7 @@ background-image: url("https://www.transparenttextures.com/patterns/45-degree-fa
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 display: flex;
 flex-direction: column;
-position: relative;
+margin-top: 120px;
 
 }
 
