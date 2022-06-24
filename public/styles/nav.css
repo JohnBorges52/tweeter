@@ -40,10 +40,11 @@ nav {
   background-color: transparent;
   color: red;
 }
-.new-tweet-btn i.boucing {
+i.bouncing {
   animation: bounce2 1.5s ease infinite forwards;
 }
 @keyframes bounce2 {
+
 0% {
   transform: translateY(-0.2rem);
 }

@@ -5,17 +5,23 @@
  */
 $(document).ready(function() {
 
+  $("#btn-to-tweet").click(function() {
+    $("#tweet-text").focus();
+  });
+  
   const loadTweets = function() {
     $.get("http://localhost:8080/tweets").then(data => {
-    renderTweets(data)
+      renderTweets(data)
     })
-   
+    
   }  
+  loadTweets()
+  
   $(`#new-tweet-form`).on('submit', (event) => {
     event.preventDefault();
+    
     const serialized = $(`#new-tweet-form`).serialize();
     const length = $(`#tweet-text`).val().length
-    
     if (length > 140) {
       $(".error-message").css("display", "flex")
     } else if (length === 0) {
@@ -23,20 +29,21 @@ $(document).ready(function() {
     } else {
       $(".error-message").css("display", "none")
       $.post("/tweets", serialized);
+      loadTweets()
+      $("#tweet-text").val('')
+      $("#tweet-text").focus()
     }
 
-
-   
-    loadTweets()
   }) 
   
 
-const renderTweets = function (tweets) {
-  
+  const renderTweets = function (tweets) {
+    $( "#tweets-container" ).empty();
   for (let item of tweets) {
     const $user = createTweetElement(item)
     $('#tweets-container').append($user)
   }
+
 }
 
 
@@ -57,7 +64,7 @@ const createTweetElement = function(obj) {
   </div>
   <div class="div-past-tweet-message">${safeHTML}
   </div>
-  <div class="div-bellow-tweet-message">
+  <footer class="div-bellow-tweet-message">
     <span>${timeago.format(obj.created_at)}</span>
     <div>
       <a class="icon-link-hover" href="#">
@@ -70,7 +77,7 @@ const createTweetElement = function(obj) {
         <i class="fa-solid fa-heart"></i
       ></a>
     </div>
-  </div>
+  </footer>
 </article>`);
 
 return $tweet
@@ -81,5 +88,7 @@ const escape = function (str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+
+
 });
 
