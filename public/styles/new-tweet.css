@@ -3,9 +3,9 @@
   margin: 0 auto;
 }
 
-.div-form{
+.div-form {
   background-color: #f4f1ec;
-  justify-content:space-between;
+  justify-content: space-between;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,18 +26,15 @@
 .compose-tweet {
   font-size: 1.5em;
   font-weight: 600;
-
 }
 
-form{
+form {
   width: 90%;
   margin: 0 auto;
-
 }
-.form-label{
-  color:#545149; 
+.form-label {
+  color: #545149;
   font-weight: 600;
-
 }
 
 textarea {
@@ -48,22 +45,20 @@ textarea {
   border: none;
   border-bottom: 3px solid #545149;
   height: 40px;
-
 }
-.button-and-counter{
+.button-and-counter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 15px ;
+  margin-top: 15px;
 }
 .submit-tweet-btn {
-  background-color: #4056A1;
+  background-color: #4056a1;
   color: white;
-  font-family: 'Bungee', cursive;
-  border: 1px solid #4056A1;
-
+  font-family: "Bungee", cursive;
+  border: 1px solid #4056a1;
 }
-.number-counter{
-  color:#545149; 
-  font-family: 'Bungee', cursive;
+.number-counter {
+  color: #545149;
+  font-family: "Bungee", cursive;
 }

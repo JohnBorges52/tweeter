@@ -3,17 +3,17 @@ nav {
   width: 100%;
   background-color: #e39700;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
-  color:#FFFFFF;
+  color: #ffffff;
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
 }
 
 .nav-span-logo {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   font-size: 1.5em;
   margin-left: 1.5em;
 }
@@ -22,11 +22,9 @@ nav {
   margin-right: 1.5em;
   display: flex;
   flex-direction: column;
-  
 }
-.nav-text-bold{
+.nav-text-bold {
   font-weight: 600;
-  
 }
 
 .icon-container {
@@ -44,15 +42,13 @@ i.bouncing {
   animation: bounce2 1.5s ease infinite forwards;
 }
 @keyframes bounce2 {
-
-0% {
-  transform: translateY(-0.2rem);
-}
-50% {
-  transform: translateY(0.2rem);
-}
-100% {
-  transform: translateY(-0.2rem);
-}
-
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  50% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(-0.2rem);
+  }
 }

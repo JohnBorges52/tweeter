@@ -3,7 +3,10 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
     <!-- External CSS -->
     <link
@@ -61,52 +64,54 @@
           <span class="nav-text-bold"> Write </span> a new tweet
         </div>
         <div class="icon-container">
-          <button id="btn-to-tweet" class="new-tweet-btn"><i class="fa-solid fa-angles-down bouncing"></i></button>
+          <button id="btn-to-tweet" class="new-tweet-btn">
+            <i class="fa-solid fa-angles-down bouncing"></i>
+          </button>
         </div>
       </div>
     </nav>
-    
-    <div class="container-desk">
 
+    <div class="container-desk">
       <header>
         <div class="header-container">
           <img src="/images/profile-hex.png" />
-          
-          <div class="user-name"><span class="h2-bellow-img-bold"> John  </span> Borges</div>
+
+          <div class="user-name">
+            <span class="h2-bellow-img-bold"> John </span> Borges
+          </div>
         </div>
       </header>
-      
+
       <!-- Page-specific (main) content here -->
       <section class="new-tweet">
         <div class="error-message">
-          <h3> 🤖 You entered more than 140 characters!! 🤖</h3>
-        
-      </div>
-      <div class="div-form">
-        <form method="post" action="/tweets" id="new-tweet-form">
-          <span class="compose-tweet">Compose Tweet</span>
-          <br>
-          <br>
-          <label class="form-label" for="tweet-text">
-            What are you humming about?
-          </label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="button-and-counter">
-            <button class="submit-tweet-btn" type="submit" id="add-more-posts">
-              Tweet
-            </button>
-            <output class="number-counter" name="counter" for="tweet-text"
-            >140</output
-            >
-          </div>
-        </form>
-      </div>
-      <main class="container" id="tweets-container"></main>
-    </section>
-  </div>
- 
-
-
-    
+          <h3>🤖 You entered more than 140 characters!! 🤖</h3>
+        </div>
+        <div class="div-form">
+          <form method="post" action="/tweets" id="new-tweet-form">
+            <span class="compose-tweet">Compose Tweet</span>
+            <br />
+            <br />
+            <label class="form-label" for="tweet-text">
+              What are you humming about?
+            </label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="button-and-counter">
+              <button
+                class="submit-tweet-btn"
+                type="submit"
+                id="add-more-posts"
+              >
+                Tweet
+              </button>
+              <output class="number-counter" name="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </div>
+        <main class="container" id="tweets-container"></main>
+      </section>
+    </div>
   </body>
 </html>

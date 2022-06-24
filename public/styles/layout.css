@@ -31,10 +31,9 @@ body {
   width: 100%;
   margin: 0 auto;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   display: flex;
   flex-direction: column-reverse;
-
 }
 
 /* ARTICLE ADJUSTMENTS*/
@@ -61,9 +60,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
 }
-
 
 .person-hashtag {
   color: rgb(62, 62, 173, 0.4);
@@ -98,4 +95,84 @@ body {
 }
 .tweets-article:hover {
   box-shadow: 5px 5px rgba(64, 86, 161, 0.5);
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+
+@media only screen and (min-width: 1024px) {
+  .container-desk {
+    width: 100%;
+    display: flex;
+    margin-top: 250px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: 30px;
+  }
+
+  .header-container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .icon-name-hashtag {
+    justify-content: space-between;
+  }
+
+  .new-tweet {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 200px;
+  }
+  .icon-name {
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+
+  .div-form {
+    margin-top: 0;
+  }
+
+  nav {
+    height: 120px;
+    width: 100%;
+    background-color: #4056a1;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+  }
+
+  .nav-span-logo {
+    font-family: "Bungee", cursive;
+    font-size: 1.5em;
+    margin-left: 1.5em;
+  }
+
+  .nav-div-right-text {
+    margin-right: 1.5em;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-text-bold {
+    font-weight: 600;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+  }
 }
