@@ -1,6 +1,6 @@
 $(document).ready(function() {
   
-
+  ///// RESPONSIBLE FOR COUNTING THE NUMBER OF CHARACTERES TYPED ON THE TWEET /////
   const $textarea = $("#tweet-text");
 
   $textarea.on("keyup", () => {

@@ -22,6 +22,16 @@
   justify-content: center;
   align-items: center;
 }
+.error-message-empty{
+  width: 100%;
+  text-align: center;
+  margin: 35px auto;
+  color: red;
+  border: 5px solid red;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
 
 .compose-tweet {
   font-size: 1.5em;
@@ -140,5 +150,25 @@ textarea {
   .icon-container {
     display: flex;
     justify-content: center;
+  }
+  .error-message {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: red;
+    border: 5px solid red;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .error-message-empty{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: red;
+    border: 5px solid red;
+    display: none;
+    justify-content: center;
+    align-items: center;
   }
 }

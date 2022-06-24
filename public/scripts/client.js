@@ -3,33 +3,45 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(function () {
+  ///// RESPONSIBLE FOR FOCUS THE INFORMATION ON THE TEXTAREA AND LOAD NEW TWEETS ON THE PAGE ///////
+
   $("#btn-to-tweet").click(function () {
     $("#tweet-text").focus();
   });
 
   const loadTweets = function () {
-    $.get("http://localhost:8080/tweets").then((data) => {
+    $.get("/tweets").then((data) => {
       renderTweets(data);
     });
   };
   loadTweets();
+  /////////  RESPONSIBLE FOR SUBMITTING BUTTON AND ERROR HANDLING ////
 
   $(`#new-tweet-form`).on("submit", (event) => {
     event.preventDefault();
 
     const serialized = $(`#new-tweet-form`).serialize();
     const length = $(`#tweet-text`).val().length;
+
     if (length > 140) {
       $(".error-message").css("display", "flex");
+      $(".error-message-empty").css("display", "none");
     } else if (length === 0) {
-      alert("You need to type something...");
+      $(".error-message-empty").css("display", "flex");
+      $(".error-message").css("display", "none");
     } else {
       $(".error-message").css("display", "none");
-      $.post("/tweets", serialized);
-      loadTweets();
+      $(".error-message-empty").css("display", "none");
+
+      $.post("/tweets", serialized).then((data) => {
+        loadTweets(data);
+      });
+
       $("#tweet-text").val("");
       $("#tweet-text").focus();
+      $(".number-counter").val("140");
     }
   });
 
@@ -41,6 +53,7 @@ $(document).ready(function () {
     }
   };
 
+  //// CREATE EACH SINGLE TWEET AND APPLY USERS INFORMATION /////
   const createTweetElement = function (obj) {
     const safeHTML = `<p>${escape(obj.content.text)}</p>`;
 
@@ -73,7 +86,7 @@ $(document).ready(function () {
 
     return $tweet;
   };
-
+  ////// MAKE ESCAPE WORDS IN ORDER TO NOT ACTIVATE SCRIPTS BY USERS //////
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
