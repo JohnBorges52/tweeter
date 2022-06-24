@@ -1,7 +1,8 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #e39700;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
   color:#FFFFFF;
   display: flex;
   flex-direction: row;
@@ -33,3 +34,24 @@ nav {
   justify-content: center;
 }
 
+.new-tweet-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: red;
+}
+.new-tweet-btn i.boucing {
+  animation: bounce2 1.5s ease infinite forwards;
+}
+@keyframes bounce2 {
+0% {
+  transform: translateY(-0.2rem);
+}
+50% {
+  transform: translateY(0.2rem);
+}
+100% {
+  transform: translateY(-0.2rem);
+}
+
+}

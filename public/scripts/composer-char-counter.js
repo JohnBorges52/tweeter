@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
 
   const $textarea = $("#tweet-text");
 
@@ -9,7 +10,8 @@ $(document).ready(function() {
         $(".number-counter").text(140-($length));
       } else {
         $(".number-counter").text(140-($length));
-        $(".number-counter").css("color","#545149")
+        $(".number-counter").css("color","#545149");
+        
       }
 
   })

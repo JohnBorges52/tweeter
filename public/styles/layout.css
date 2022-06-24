@@ -28,10 +28,13 @@ body {
  */
 
 .container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
+  display: flex;
+  flex-direction: column-reverse;
+
 }
 
 /* ARTICLE ADJUSTMENTS*/
@@ -41,23 +44,26 @@ body {
   background-color: #f4f1ec;
   border: 2px solid black;
   margin: 2em auto 0 auto;
+
   /* CHANGE THE MARGIN BOTTON BEFORE SUBMITING*/
 }
 .icon-name-hashtag {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 13px 3vw 0;
+  margin: 13px 3% 0;
   align-items: center;
 }
 
 .icon-name {
-  width: 10vw;
+  width: 20vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  
 }
+
 
 .person-hashtag {
   color: rgb(62, 62, 173, 0.4);

@@ -1,14 +1,32 @@
 .new-tweet {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .div-form{
   background-color: #f4f1ec;
-
   justify-content:space-between;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+}
+
+.error-message {
+  width: 100%;
+  text-align: center;
+  margin: 35px auto;
+  color: red;
+  border: 5px solid red;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.compose-tweet {
+  font-size: 1.5em;
+  font-weight: 600;
+
 }
 
 form{
